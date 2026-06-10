@@ -1,0 +1,111 @@
+﻿--- PAGE 1 ---
+ARNAV SAMAHITH | NA24B025 | INDIAN INSTITUTE OF TECHNOLOGY, MADRAS
+EDUCATION AND SCHOLASTIC ACHIEVEMENTS
+Program Institute % / CGPA Year
+B.Tech in Naval Architecture and Ocean Engineering Indian Institute of Technology, Madras 8.97 / 10 2028
+Class XII (Karnataka State Board) RV PU College, Bengaluru 98.7 % 2024
+Class X (ICSE) Little Flower Public School, Bengaluru 97.3 % 2022
+ΓÇó Secured 99.22 percentile in JEE Mains & AIR 6023 in JEE Advanced among 12 lakh & 1.8 lakh candidates respectively [top 0.7%]. 2024
+ΓÇó Secured state rank 7 in Karnataka in Class XII among 6.8L candidates [Top 0.001%] with 100/100 in Physics & Computer Science. 2024
+ΓÇó Achieved AIR 67 and a 100 percentile in Chemistry in COMEDK 2024 among 1.18 lakh engineering aspirants throughout India. 2024
+ΓÇó Secured Rank 539 in KCET[1] 2024 among 3.10 lakh engineering candidates, placing in the top 0.17% across Karnataka state. 2024
+ΓÇó Awarded multiple general proficiency accolades, subject & excellence prizes throughout school and pre-university college. -
+PROFESSIONAL EXPERIENCE
+EdTech company (SaaS) with 400+ institutional clients incl. NLSIU, National Law universities, 200+ schools nationwide.
+Edchemy
+ΓÇó Assessed end-to-end commercial feasibility of an AI assessment product across K-12 schools & university segments
+Product Strategy Intern
+ΓÇó Mapped 6+ AI tools; structured a 3-tier pricing model, projecting breakeven at 20% adoption across existing clients
+May ΓÇÖ26 ΓÇô Present
+ΓÇó Developed business model & GTM framework; built a launch roadmap enabling founding team's go/no-go decision
+CASE STUDY COMPETITIONS
+Samnivesha ΓÇó Won 1st position in a sustainability focused case study conducted by IIT Patna, outcompeting 400+ other teams.
+IIT Patna ΓÇó Proposed a low-carbon concrete mix that cuts COΓéé emissions by 60%, replacing clinker with industrial by-products.
+Winner, 2026 ΓÇó Modelled national adoption scenario projecting 50 Mt[7] COΓéé savings per year with zero new capex infrastructure.
+Fisconomics ΓÇó Won 3rd place in a finance case competition tasked with redesigning budget allocation for a district in Rajasthan.
+IIT Madras ΓÇó Identified key bottlenecks suppressing economic growth, having per capita income 46% below the national average.
+3rd Place, 2026 ΓÇó Proposed Γé╣806 Cr budget allocation across high-impact sectors, projecting Γé╣1,641 Cr economic impact in 5 years.
+Delhivery Way ΓÇó Ranked Top 10 nationally among 2,616 teams at IIT Kharagpur, evaluated directly by DelhiveryΓÇÖs C-suite leadership
+IIT Kharagpur ΓÇó Built a full GTM strategy to launch a C2C shipping app, projecting 60% CAC[8] reduction with 18% EBITDA[9] margin.
+National Finalist, 2026 ΓÇó Devised zero-capex expansion strategy by embedding the Delhivery app within UPI platforms & social selling apps.
+Strategia, SIBM Pune ΓÇó Ranked Top 8 nationally of 1,200 teams at SIBM's case competition; only undergraduate team with 7 MBA finalists
+National Finalist, 2026 ΓÇó Diagnosed and prescribed a full turnaround strategy across marketing & finance for a struggling beverage startup.
+ΓÇó
+ΓÇó Secured Top 10 finish among 200+ teams in ChangePay's national GTM and marketplace strategy competition
+ChangePay
+ΓÇó Diagnosed 4 structural adoption barriers across Γé╣50Cr campus economy, mapping friction across 1,250 daily orders
+NIT Surathkal
+ΓÇó Designed vendor-first digitization strategy anchoring on Isthara Mess (800 orders/day), projecting Γé╣15L daily GMV
+National Finalist, 2026
+ΓÇó Modelled unit economics yielding 31x LTV:CAC ratio & 11-day payback period, with a 6-month industry benchmark
+ΓÇó
+Technical Projects and Competitions
+Engineered a 2m wingspan fixed-wing UAV, from concept to flight targeting drone-tracking & defense applications.
+Guided UAV ΓÇó Designed full aircraft CAD[2] assembly in Autodesk Fusion 360; fabricated using glass and carbon fibre composites.
+Aero Club ΓÇó Deployed YOLO CV[3] model for real-time object detection, achieved 0.6 confidence with aerial targets at ~30 FPS[4].
+ΓÇó Programmed automatic safety responses & set up drone communication completing 4-milestone test campaigns.
+IMC[13] Prosperity 4 ΓÇó Ranked 8th in India and 41st globally in IMC Prosperity 4, algorithmic trading competition with over 22,000 teams.
+(Phase 1) ΓÇó Engineered Python trading bots using market-making strategies across equities, options and fair-value estimation.
+May ΓÇÿ26 ΓÇó Back-tested strategies on 360,000+ historical data rows, iterating to maximize PnL through systematic log analysis.
+ΓÇó Engineered autonomous micro-mouse from a line-following bot, using flood-fill pathfinding to solve an 8├ù8 maze.
+Mini mouse
+ΓÇó Iterated hardware-software stack across 5+ cycles using Arduino & IR sensors, cutting navigation errors by ~40%.
+Robotics club
+ΓÇó Deployed A*[5] path planning algorithm enabling sub-optimal path correction in real time during maze traversal.
+ΓÇó Engineered a 2-stage visual tracking pipeline: YOLOv8 for initial detection
+UAV visual tracking
+ΓÇó Integrated cv2.KalmanFilter (4-state: x, y, vx, vy) with KCF bbox centroid measurements
+system
+ΓÇó Implemented dynamic tracker re-initialization ΓÇö on KCF failure, system automatically reacquires target via YOLO
+ΓÇó Developed pricing models for commodity storage contracts, integrating cost factors & market conditions
+JP Morgan Chase & Co
+ΓÇó Analyzed loan data, built logistic regression model to predict probability of default, with 99% accuracy
+Research Simulation
+ΓÇó Maximized log-likelihood using dynamic programming to bucket 9900+ FICO scores by default density
+ΓÇó Engineered heads-up poker bot with Monte Carlo equity simulation across 250 sims/decision.
+Algorithmic Poker Bot
+ΓÇó Built dynamic decision logic with 6 equity thresholds across preflop/flop/turn/river, adjusting aggression based on
+IIT PokerBots 2026
+board texture, pot odds, stack-to-pot ratio, and per-street raise counts to prevent escalation loops.
+Answer Paper ΓÇó Developed LLM grading pipeline using PDF segmentation, script OCR, and JSON prompting across 7 NLP tasks.
+Evaluation ΓÇó Benchmarked 4+ LLMs on handwriting recognition, step-marking accuracy, reasoning on 14 subject-grade combos
+Self-project ΓÇó Built React dashboard with Python backend; automated scoring across 7 subjects, 2 grade levels.
+--- PAGE 2 ---
+Equity Intelligence ΓÇó Engineered AI equity platform analyzing 70+ Nifty companies via dual-source financial ingestion & Gemini scoring
+System ΓÇó Architected 9-layer ETL pipeline ingesting NSE PDFs, exposing 15+ endpoints via custom MCP server
+Self-project ΓÇó Built Z-score peer evaluation engine for ranked stock comparison across fundamental & qualitative dimensions
+POSITIONS OF RESPONSIBILITY
+Shaastra CR Head ΓÇó Leading INR 1.9 Cr monetary sponsorship target for Shaastra '27 with a year-long strategy and execution roadmap
+Sponsorship & PR ΓÇó Spearheading mentorship for a team of 18 coordinators to acquire in-kind and monetary sponsorships worth 15L+
+May ΓÇÖ26 - Present ΓÇó Identified and pursued new sponsorship avenues; defined KPIs to assess growth & revamped sponsor engagement
+Manager ΓÇó Spearheaded startup-investor matchmaking event at E-Summit '26, IIT Madras, gaining ~10 investor commitments.
+Startup Services, E-Cell ΓÇó Scaled meetings 33% YoY, registrations 2.5x YoY growth; managed end-to-end outreach achieving zero disruptions.
+May ΓÇÖ25 ΓÇô May ΓÇÿ26 ΓÇó Built an AI-powered matchmaking portal with slot scheduling, streamlining pairing logistics across 120+ meetings.
+Coordinator ΓÇó Delivered YouTube live on autonomous navigation & path planning covering A*, RRT[6] algorithm, autonomy stacks
+Aero Club ΓÇó Conducted live UAV flight missions using Pixhawk, training students in sensor fusion, and real-time path planning.
+May ΓÇÖ25 ΓÇô May ΓÇÿ26 ΓÇó Designed & executed end-to-end curriculum for 20 juniors on aerodynamics, drone assembly & mission execution.
+Deputy Coordinator ΓÇó Organized 36' Wall Street flagship event across 3 days, engaging 400+ participants through diverse finance tracks.
+Finance Club ΓÇó Secured in-kind sponsorship deals and managed club finances to deliver speaker sessions and large-scale events.
+Aug ΓÇÖ24 ΓÇô May ΓÇÿ25 ΓÇó Analyzed consumer behavior & market trends to develop event themes aligned with current FMCG, equity insights.
+SOCIAL INITIATIVES AND EXTRA-CURRICULARS
+Startup Services ΓÇó Managed end-to-end consulting for N3X, AI SaaS startup, for market research, GTM[10] strategy & MVP[11] launch.
+Program ΓÇó Benchmarked SprintPilot against 10+ rivals across 6 features & dimensions; proposed a freemium PLG[12] strategy.
+ΓÇó Engineered high-difficulty JEE Advanced & Olympiad problems for national mock tests given by 1000+ students.
+Tensors
+ΓÇó Pitched and expanded the program to 50+ coaching institutes across India, expanding outreach and participation.
+NGO/NPO
+ΓÇó Mentored 30+ class X-XII students through 1:1 counseling sessions, delivering academic guidance & exam strategy.
+Vivarta, IIT Madras ΓÇó Spearheaded climate outreach initiatives including interviewing an IISc professor on environmental research.
+Climate Awareness Club ΓÇó Designed climate awareness posters across campus, driving engagement and participation on sustainability issues.
+ΓÇó Achieved Runner-Up finish at state-level table tennis tournament; took part in numerous state-level tournaments.
+ΓÇó Represented Bangalore Football Club in under-16 football leagues throughout the state as part of BFC U-16 team.
+Sports and Cultural
+ΓÇó Part of Oratory Contingent, IIT Madras. Won 5+ inter-school competitions in Elocution, Declamation, and Debate.
+ΓÇó Performed at Kannada Sahithya Parishat. Proficient in Keyboard & Tabla. Performed on stage for Sanchari Theatre
+COURSEWORK AND SKILLS
+Principles of economics Machine learning foundations Linear algebra
+Basic electrical circuits & instruments Data Structures & Algorithms Innovation and entrepreneurship
+Analysis of Structures Multivariable calculus Differential equations
+Python, Matlab, C++ Scientific Computing in C++ Drawing
+[1] Karnataka CET, [2] Computer Aided Design, [3] Computer Vision, [4] Frames Per Second, [5] A-star, [6] Rapidly exploring Random Tree, [7] Metric tonnes, [8] Customer Acquisition Cost, [9] Earnings Before
+Interest, Taxes, Depreciation, Amortization, [10] Go-To-Market, [11] Minimum Viable Product, [12] Product-Led Growth, [13] IMC (International MarketmakerΓÇÖs combination), premier global trading firm

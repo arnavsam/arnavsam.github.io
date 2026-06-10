@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact — Arnav Samahith | IIT Madras</title>
+  <meta name="description" content="Get in touch with Arnav Samahith — B.Tech in Naval Architecture and Ocean Engineering student at IIT Madras. Reach out for collaborations in engineering, product strategy, robotics, or algorithmic trading." />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            accent: '#10b981',
+            'accent-light': '#34d399',
+            'accent-dark': '#059669',
+          },
+          fontFamily: { sans: ['Inter', 'system-ui', 'sans-serif'] },
+        }
+      }
+    }
+  </script>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body class="bg-slate-900 text-slate-50 font-sans antialiased">
+
+  <!-- NAV -->
+  <header id="main-nav" class="nav-blur fixed top-0 left-0 right-0 z-50">
+    <nav class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+      <a href="index.html" class="text-lg font-bold tracking-tight text-white hover:text-accent transition-colors duration-200">
+        <span class="gradient-text">arnav</span><span class="text-slate-400">.</span>
+      </a>
+      <div class="hidden md:flex items-center gap-8">
+        <a href="index.html"    class="nav-link">Home</a>
+        <a href="about.html"   class="nav-link">About</a>
+        <a href="projects.html" class="nav-link">Projects</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+        <a href="contact.html" class="btn-primary text-sm py-2 px-5">
+          <span>Hire Me</span>
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+        </a>
+      </div>
+      <button id="hamburger-btn" class="md:hidden flex flex-col gap-1.5 p-2 rounded-lg hover:bg-slate-800 transition-colors" aria-label="Open menu">
+        <span class="block w-5 h-0.5 bg-slate-300"></span>
+        <span class="block w-5 h-0.5 bg-slate-300"></span>
+        <span class="block w-5 h-0.5 bg-slate-300"></span>
+      </button>
+    </nav>
+  </header>
+
+  <div id="mobile-menu" class="mobile-menu" style="display:none;">
+    <button id="mobile-close" class="absolute top-6 right-6 text-slate-400 hover:text-white transition-colors" aria-label="Close menu">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+    </button>
+    <a href="index.html"    class="mobile-nav-link">Home</a>
+    <a href="about.html"   class="mobile-nav-link">About</a>
+    <a href="projects.html" class="mobile-nav-link">Projects</a>
+    <a href="contact.html" class="mobile-nav-link">Contact</a>
+    <a href="contact.html" class="btn-primary mt-2"><span>Hire Me</span></a>
+  </div>
+
+  <main class="pt-24">
+
+    <!-- PAGE HEADER -->
+    <section class="px-6 py-16 border-b border-slate-800 hero-bg">
+      <div class="max-w-6xl mx-auto text-center">
+        <p class="reveal section-label justify-center mb-4">Say Hello</p>
+        <h1 class="reveal reveal-delay-1 text-5xl md:text-6xl font-black mb-4">
+          Let's <span class="gradient-text">Connect</span>
+        </h1>
+        <p class="reveal reveal-delay-2 text-slate-400 text-lg max-w-lg mx-auto">
+          Have a project in mind, or just want to say hi? My inbox is always open — I'll do my best to respond promptly!
+        </p>
+      </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section class="py-20 px-6">
+      <div class="max-w-6xl mx-auto">
+        <div class="grid grid-cols-1 lg:grid-cols-5 gap-12">
+
+          <!-- LEFT — Reach Me Directly -->
+          <div class="lg:col-span-2">
+            <div class="reveal sticky top-28">
+              <h2 class="text-2xl font-bold text-white mb-2">Reach Me Directly</h2>
+              <p class="text-slate-400 text-sm leading-relaxed mb-8">
+                Prefer a direct line? Find me on these platforms — I'm most responsive on LinkedIn and Email.
+              </p>
+
+              <!-- Direct Links -->
+              <div class="space-y-4">
+
+                <a href="mailto:na24b025@smail.iitm.ac.in" class="flex items-center gap-4 p-4 rounded-xl bg-slate-800 border border-slate-700 hover:border-accent hover:bg-slate-800/80 transition-all duration-300 group">
+                  <div class="w-10 h-10 rounded-xl bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center flex-shrink-0 group-hover:bg-emerald-500/20 transition-colors">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+                  </div>
+                  <div>
+                    <p class="text-xs text-slate-500 mb-0.5">Email</p>
+                    <p class="text-white font-medium text-sm group-hover:text-accent transition-colors">na24b025@smail.iitm.ac.in</p>
+                  </div>
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-slate-600 ml-auto group-hover:text-accent transition-colors" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+                </a>
+
+                <a href="https://linkedin.com/in/arnavsamahith" target="_blank" rel="noopener" class="flex items-center gap-4 p-4 rounded-xl bg-slate-800 border border-slate-700 hover:border-accent hover:bg-slate-800/80 transition-all duration-300 group">
+                  <div class="w-10 h-10 rounded-xl bg-blue-500/10 border border-blue-500/20 flex items-center justify-center flex-shrink-0 group-hover:bg-blue-500/20 transition-colors">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-blue-400" fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                  </div>
+                  <div>
+                    <p class="text-xs text-slate-500 mb-0.5">LinkedIn</p>
+                    <p class="text-white font-medium text-sm group-hover:text-accent transition-colors">/in/arnavsamahith</p>
+                  </div>
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-slate-600 ml-auto group-hover:text-accent transition-colors" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
+                </a>
+
+                <a href="https://github.com/arnavsamahith" target="_blank" rel="noopener" class="flex items-center gap-4 p-4 rounded-xl bg-slate-800 border border-slate-700 hover:border-accent hover:bg-slate-800/80 transition-all duration-300 group">
+                  <div class="w-10 h-10 rounded-xl bg-slate-700/50 border border-slate-600 flex items-center justify-center flex-shrink-0 group-hover:bg-slate-700 transition-colors">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-slate-300" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 21.795 24 17.295 24 12c0-6.63-5.37-12-12-12z"/></svg>
+                  </div>
+                  <div>
+                    <p class="text-xs text-slate-500 mb-0.5">GitHub</p>
+                    <p class="text-white font-medium text-sm group-hover:text-accent transition-colors">@arnavsamahith</p>
+                  </div>
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-slate-600 ml-auto group-hover:text-accent transition-colors" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
+                </a>
+
+              </div>
+
+              <!-- Response time badge -->
+              <div class="reveal mt-8 flex items-center gap-3 px-4 py-3 rounded-xl bg-slate-800/60 border border-slate-700">
+                <span class="accent-dot flex-shrink-0"></span>
+                <p class="text-slate-400 text-sm">Typically responds within <strong class="text-white">24 hours</strong></p>
+              </div>
+            </div>
+          </div>
+
+          <!-- RIGHT — Contact Form -->
+          <div class="lg:col-span-3">
+            <div class="reveal card p-8 md:p-10">
+              <h2 class="text-2xl font-bold text-white mb-2">Send a Message</h2>
+              <p class="text-slate-500 text-sm mb-8">Fill in the form below and I'll get back to you as soon as possible.</p>
+
+              <form id="contact-form" novalidate class="space-y-6">
+
+                <!-- Name + Email row -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                  <div class="form-group">
+                    <label class="form-label" for="name">Full Name <span class="text-rose-400">*</span></label>
+                    <input
+                      type="text"
+                      id="name"
+                      name="name"
+                      class="form-input"
+                      placeholder="John Doe"
+                      autocomplete="name"
+                    />
+                  </div>
+                  <div class="form-group">
+                    <label class="form-label" for="email">Email Address <span class="text-rose-400">*</span></label>
+                    <input
+                      type="email"
+                      id="email"
+                      name="email"
+                      class="form-input"
+                      placeholder="john@example.com"
+                      autocomplete="email"
+                    />
+                  </div>
+                </div>
+
+                <!-- Subject -->
+                <div class="form-group">
+                  <label class="form-label" for="subject">Subject</label>
+                  <input
+                    type="text"
+                    id="subject"
+                    name="subject"
+                    class="form-input"
+                    placeholder="Project inquiry, collaboration, etc."
+                  />
+                </div>
+
+                <!-- Budget (optional) -->
+                <div class="form-group">
+                  <label class="form-label" for="budget">Project Budget (optional)</label>
+                  <select id="budget" name="budget" class="form-input" style="appearance:none; background-image:url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%2394a3b8' viewBox='0 0 16 16'%3E%3Cpath d='M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z'/%3E%3C/svg%3E\"); background-repeat:no-repeat; background-position:right 1rem center; padding-right:2.5rem;">
+                    <option value="" class="bg-slate-900">Select a range...</option>
+                    <option value="<1k" class="bg-slate-900">Under $1,000</option>
+                    <option value="1k-5k" class="bg-slate-900">$1,000 – $5,000</option>
+                    <option value="5k-15k" class="bg-slate-900">$5,000 – $15,000</option>
+                    <option value="15k+" class="bg-slate-900">$15,000+</option>
+                    <option value="open" class="bg-slate-900">Open to discuss</option>
+                  </select>
+                </div>
+
+                <!-- Message -->
+                <div class="form-group">
+                  <label class="form-label" for="message">Message <span class="text-rose-400">*</span></label>
+                  <textarea
+                    id="message"
+                    name="message"
+                    rows="5"
+                    class="form-input resize-none"
+                    placeholder="Tell me about your project, idea, or just say hi..."
+                  ></textarea>
+                </div>
+
+                <!-- Submit -->
+                <button type="submit" id="submit-btn" class="btn-primary w-full justify-center py-3.5 text-base">
+                  <span>Send Message</span>
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"/>
+                  </svg>
+                </button>
+
+                <p class="text-slate-600 text-xs text-center">
+                  🔒 Your information is kept private and never shared with third parties.
+                </p>
+              </form>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- AVAILABILITY BANNER -->
+    <section class="py-16 px-6 bg-slate-800/30 border-t border-slate-800">
+      <div class="max-w-3xl mx-auto text-center">
+        <div class="reveal inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-slate-800 border border-slate-700 text-sm text-slate-400 mb-6">
+          <span class="accent-dot"></span>
+          Currently available for freelance & full-time roles
+        </div>
+        <h2 class="reveal reveal-delay-1 text-3xl md:text-4xl font-bold mb-4">
+          Ready to build something <span class="gradient-text">great?</span>
+        </h2>
+        <p class="reveal reveal-delay-2 text-slate-400 mb-8 max-w-lg mx-auto">
+          Whether it's a startup MVP, a design system, or an open-source collab — let's make it happen.
+        </p>
+        <div class="reveal reveal-delay-3 flex flex-wrap justify-center gap-4">
+          <a href="projects.html" class="btn-ghost">
+            View My Work
+          </a>
+          <a href="about.html" class="btn-ghost">
+            Learn About Me
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="py-12 px-6 bg-slate-900 border-t border-slate-800">
+    <div class="max-w-6xl mx-auto">
+      <div class="footer-divider mb-6"></div>
+      <div class="flex flex-col sm:flex-row items-center justify-between gap-4">
+        <a href="index.html" class="text-lg font-bold gradient-text">arnav.</a>
+        <div class="flex gap-6">
+          <a href="index.html"    class="text-slate-500 hover:text-accent text-sm transition-colors">Home</a>
+          <a href="about.html"   class="text-slate-500 hover:text-accent text-sm transition-colors">About</a>
+          <a href="projects.html" class="text-slate-500 hover:text-accent text-sm transition-colors">Projects</a>
+          <a href="contact.html" class="text-slate-500 hover:text-accent text-sm transition-colors">Contact</a>
+        </div>
+        <p class="text-slate-600 text-xs">&copy; 2026 Arnav Samahith. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Toast Notification -->
+  <div id="toast" class="toast">
+    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-accent flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+    </svg>
+    <div>
+      <p class="font-semibold text-sm">Message sent! 🎉</p>
+      <p class="text-slate-400 text-xs">I'll get back to you within 24 hours.</p>
+    </div>
+  </div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
