@@ -1,288 +1,603 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Arnav Samahith - Engineer & Builder | IIT Madras</title>
-  <meta name="description" content="Personal portfolio of Arnav Samahith - B.Tech Naval Architecture student at IIT Madras. Engineer, competition and hackathon winner, consulting and strategy enthusiast, and technical builder." />
-
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            accent: '#10b981',
-            'accent-light': '#34d399',
-            'accent-dark': '#059669',
-          },
-          fontFamily: { sans: ['Inter', 'system-ui', 'sans-serif'] },
-        }
-      }
-    }
-  </script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="theme-color" content="#030712" />
+  <title>Arnav Samahith</title>
+  <meta name="description" content="Arnav Samahith — Engineer | Builder | Strategist | IIT Madras | Building guided UAVs, algorithmic trading bots, and AI platforms" />
+  <meta name="author" content="Arnav Samahith" />
+  <meta name="keywords" content="Arnav Samahith, IIT Madras, software engineer, UAV, algorithmic trading, AI, portfolio" />
+  <meta name="robots" content="index, follow" />
+  <meta property="og:title" content="Arnav Samahith" />
+  <meta property="og:description" content="Arnav Samahith — Engineer | Builder | Strategist | IIT Madras" />
+  <meta property="og:type" content="website" />
   <link rel="stylesheet" href="css/style.css" />
 </head>
 
-<body class="bg-slate-900 text-slate-50 font-sans antialiased">
+<body>
 
-  <!-- NAVIGATION -->
-  <header id="main-nav" class="nav-blur fixed top-0 left-0 right-0 z-50">
-    <nav class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
-      <a href="index.html" class="text-lg font-bold tracking-tight text-white hover:text-accent transition-colors duration-200">
-        <span class="gradient-text">arnav</span><span class="text-slate-400">.</span>
+  <!-- ═══════════════════════════════════════════════════════════
+       NAVIGATION
+       ═══════════════════════════════════════════════════════════ -->
+  <nav class="nav" id="main-nav">
+    <div class="nav-inner">
+      <a href="#hero" class="nav-logo">
+        <span class="accent">arnav</span><span class="dot">.</span>
       </a>
-      <div class="hidden md:flex items-center gap-8">
-        <a href="index.html"    class="nav-link">Home</a>
-        <a href="about.html"   class="nav-link">About</a>
-        <a href="projects.html" class="nav-link">Projects</a>
-        <a href="contact.html" class="nav-link">Contact</a>
-        <a href="contact.html" class="btn-primary text-sm py-2 px-5">
-          <span>Get In Touch</span>
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
-        </a>
+      <div class="nav-links">
+        <a href="#about" class="nav-link" data-section="about">About</a>
+        <a href="#experience" class="nav-link" data-section="experience">Experience</a>
+        <a href="#projects" class="nav-link" data-section="projects">Projects</a>
+        <a href="#contact" class="nav-link" data-section="contact">Contact</a>
       </div>
-      <button id="hamburger-btn" class="md:hidden flex flex-col gap-1.5 p-2 rounded-lg hover:bg-slate-800 transition-colors" aria-label="Open menu">
-        <span class="block w-5 h-0.5 bg-slate-300"></span>
-        <span class="block w-5 h-0.5 bg-slate-300"></span>
-        <span class="block w-5 h-0.5 bg-slate-300"></span>
+      <button class="nav-hamburger" id="hamburger-btn" aria-label="Open menu">
+        <span></span><span></span><span></span>
       </button>
-    </nav>
-  </header>
+    </div>
+  </nav>
 
   <!-- Mobile Menu -->
-  <div id="mobile-menu" class="mobile-menu" style="display:none;">
-    <button id="mobile-close" class="absolute top-6 right-6 text-slate-400 hover:text-white transition-colors" aria-label="Close menu">
-      <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
-    </button>
-    <a href="index.html"    class="mobile-nav-link">Home</a>
-    <a href="about.html"   class="mobile-nav-link">About</a>
-    <a href="projects.html" class="mobile-nav-link">Projects</a>
-    <a href="contact.html" class="mobile-nav-link">Contact</a>
-    <a href="contact.html" class="btn-primary mt-2"><span>Get In Touch</span></a>
+  <div class="mobile-overlay" id="mobile-menu">
+    <button class="mobile-close" id="mobile-close" aria-label="Close menu">&times;</button>
+    <a href="#about" class="mobile-link">About</a>
+    <a href="#experience" class="mobile-link">Experience</a>
+    <a href="#projects" class="mobile-link">Projects</a>
+    <a href="#contact" class="mobile-link">Contact</a>
   </div>
 
   <main>
 
-    <!-- HERO SECTION -->
-    <section class="hero-bg min-h-screen flex items-center pt-20 pb-16 px-6">
-      <div class="max-w-6xl mx-auto w-full">
-        <div class="max-w-3xl">
+    <!-- ═══════════════════════════════════════════════════════════
+         HERO
+         ═══════════════════════════════════════════════════════════ -->
+    <section class="hero" id="hero">
+      <canvas class="hero-canvas" id="star-canvas"></canvas>
+      <div class="celestial-body"></div>
 
+      <div class="hero-content">
+        <p class="hero-subtitle">charting new frontiers</p>
+        <h1 class="hero-name">
+          <span class="first">Arnav</span>
+          <span class="last">Samahith</span>
+        </h1>
+      </div>
 
+      <div class="hero-horizon"></div>
 
-          <!-- Main heading -->
-          <h1 class="reveal reveal-delay-1 text-5xl sm:text-6xl md:text-7xl font-black leading-tight tracking-tight mb-4">
-            Hi, I'm <span class="gradient-text">Arnav</span>
-          </h1>
+      <a href="#about" class="scroll-indicator">
+        <span>descend into orbit</span>
+        <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
+          <path d="M9 3L9 13M4 9L9 14L14 9" stroke="#06B6D4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </a>
+    </section>
 
-          <!-- Typewriter role -->
-          <div class="reveal reveal-delay-2 flex items-center gap-2 text-2xl sm:text-3xl md:text-4xl font-semibold text-slate-300 mb-6">
-            <span>a </span>
-            <span class="text-accent" id="typewriter"></span>
-            <span class="typewriter-cursor"></span>
+    <!-- ═══════════════════════════════════════════════════════════
+         ABOUT / MISSION PROFILE
+         ═══════════════════════════════════════════════════════════ -->
+    <section class="about-section" id="about">
+      <div class="section-inner">
+
+        <div class="reveal">
+          <p class="section-label">About</p>
+          <h2 class="section-title">Mission <span class="accent">Profile</span></h2>
+        </div>
+
+        <div class="about-grid">
+
+          <!-- Profile Card -->
+          <div class="reveal reveal-d1">
+            <div class="profile-card">
+              <div class="profile-card-inner">
+                <div class="profile-avatar">AS</div>
+              </div>
+              <div class="profile-info">
+                <div class="profile-bottom">
+                  <div>
+                    <h3>Arnav Samahith</h3>
+                    <p class="role">Explorer</p>
+                  </div>
+                  <span class="level">Lv. 20</span>
+                </div>
+              </div>
+            </div>
           </div>
 
-          <!-- Sub-headline -->
-          <p class="reveal reveal-delay-3 text-lg text-slate-400 leading-relaxed max-w-xl mb-10">
-            Student at <strong class="text-white">IIT Madras</strong>, building everything from guided UAVs and algorithmic trading bots to AI-powered platforms and winning competitions and hackathons nationally.
-          </p>
+          <!-- Bio Card -->
+          <div class="reveal reveal-d2">
+            <div class="bio-card">
+              <p class="bio-text">
+                Hi, I'm <strong>Arnav Samahith</strong>, a B.Tech student in
+                <strong>Naval Architecture &amp; Ocean Engineering</strong> at
+                <span class="highlight">IIT Madras</span> (CGPA: 8.97/10). I build everything
+                from guided UAVs and algorithmic trading bots to AI-powered platforms.
+                A <strong>generalist</strong> who loves turning problems into products,
+                competing nationally, and constantly experimenting with new technologies.
+              </p>
 
-          <!-- CTAs -->
-          <div class="reveal reveal-delay-4 flex flex-wrap gap-4 mb-12">
-            <a href="projects.html" class="btn-primary">
-              <span>View My Work</span>
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
-            </a>
-            <a href="about.html" class="btn-ghost">
-              <span>About Me</span>
-            </a>
-          </div>
+              <div class="edu-badge">🎓 IIT Madras 2024–2028</div>
 
-          <!-- Social Links -->
-          <div class="reveal reveal-delay-5 flex items-center gap-4">
-            <span class="text-sm text-slate-500">Find me on</span>
-            <div class="flex gap-3">
-              <!-- GitHub -->
-              <a href="https://github.com/arnavsamahith" target="_blank" rel="noopener" class="social-link" aria-label="GitHub">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 21.795 24 17.295 24 12c0-6.63-5.37-12-12-12z"/>
-                </svg>
-              </a>
-              <!-- LinkedIn -->
-              <a href="https://linkedin.com/in/arnavsamahith" target="_blank" rel="noopener" class="social-link" aria-label="LinkedIn">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
-                </svg>
-              </a>
-              <!-- Email -->
-              <a href="mailto:na24b025@smail.iitm.ac.in" class="social-link" aria-label="Email">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                  <path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
-                </svg>
-              </a>
+              <div class="divider" style="display:none"></div>
+
+              <!-- Skills -->
+              <p class="skills-label">Skills</p>
+              <div class="skill-tags">
+                <span class="skill-tag">Python</span>
+                <span class="skill-tag">C++</span>
+                <span class="skill-tag">MATLAB</span>
+                <span class="skill-tag">YOLO / OpenCV</span>
+                <span class="skill-tag">Machine Learning</span>
+                <span class="skill-tag">React</span>
+                <span class="skill-tag">Algorithmic Trading</span>
+                <span class="skill-tag">CAD (Fusion 360)</span>
+                <span class="skill-tag">Kalman Filter</span>
+                <span class="skill-tag">Monte Carlo</span>
+                <span class="skill-tag">GTM Strategy</span>
+                <span class="skill-tag">Financial Modelling</span>
+              </div>
+
+              <div class="divider"></div>
+
+              <!-- Socials -->
+              <p class="skills-label">Connect</p>
+              <div class="social-row">
+                <a href="https://linkedin.com/in/arnavsamahith" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" class="social-icon">
+                  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                </a>
+                <a href="mailto:na24b025@smail.iitm.ac.in" aria-label="Email" class="social-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                </a>
+                <a href="https://github.com/arnavsamahith" target="_blank" rel="noopener noreferrer" aria-label="GitHub" class="social-icon">
+                  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                </a>
+                <a href="master.pdf" target="_blank" rel="noopener noreferrer" class="resume-link">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                  Resume
+                </a>
+              </div>
+
+              <div class="divider" style="margin-top:auto"></div>
+              <p class="bio-footer">
+                Loves sports <span>·</span> Loves music <span>·</span> Loves building things
+              </p>
             </div>
           </div>
 
         </div>
-      </div>
 
-      <!-- Scroll indicator -->
-      <div class="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-slate-600 hidden md:flex">
-        <span class="text-xs tracking-widest uppercase">Scroll</span>
-        <div class="w-px h-8 bg-gradient-to-b from-slate-600 to-transparent animate-bounce"></div>
+        <!-- Achievement Medals -->
+        <div class="reveal reveal-d3">
+          <p class="skills-label" style="margin-top:2.5rem; margin-bottom:1rem;">Milestones Unlocked</p>
+          <div class="achievements-row">
+
+            <div class="achievement">
+              <div class="achievement-medal medal-gold">
+                <div class="glow"></div>
+                <div class="ring"><div class="inner"><span>8.97</span></div></div>
+                <div class="tab"></div>
+              </div>
+              <p>CGPA at IIT Madras</p>
+            </div>
+
+            <div class="achievement">
+              <div class="achievement-medal medal-cyan">
+                <div class="glow"></div>
+                <div class="ring"><div class="inner"><span>99.2%</span></div></div>
+                <div class="tab"></div>
+              </div>
+              <p>JEE Mains Percentile</p>
+            </div>
+
+            <div class="achievement">
+              <div class="achievement-medal medal-violet">
+                <div class="glow"></div>
+                <div class="ring"><div class="inner"><span>SR 7</span></div></div>
+                <div class="tab"></div>
+              </div>
+              <p>State Rank Karnataka XII</p>
+            </div>
+
+            <div class="achievement">
+              <div class="achievement-medal medal-emerald">
+                <div class="glow"></div>
+                <div class="ring"><div class="inner"><span>🏆</span></div></div>
+                <div class="tab"></div>
+              </div>
+              <p>Samnivesha Winner IIT Patna</p>
+            </div>
+
+            <div class="achievement">
+              <div class="achievement-medal medal-rose">
+                <div class="glow"></div>
+                <div class="ring"><div class="inner"><span>#8</span></div></div>
+                <div class="tab"></div>
+              </div>
+              <p>IMC Prosperity India Rank</p>
+            </div>
+
+            <div class="achievement">
+              <div class="achievement-medal medal-silver">
+                <div class="glow"></div>
+                <div class="ring"><div class="inner"><span>4+</span></div></div>
+                <div class="tab"></div>
+              </div>
+              <p>National Finalist Titles</p>
+            </div>
+
+          </div>
+        </div>
+
       </div>
     </section>
 
-    <!-- WHAT I DO -->
-    <section id="what-i-do" class="py-24 px-6 bg-slate-800/30">
-      <div class="max-w-6xl mx-auto">
+    <!-- ═══════════════════════════════════════════════════════════
+         EXPERIENCE / STATIONS ALONG THE ORBIT
+         ═══════════════════════════════════════════════════════════ -->
+    <section class="experience-section" id="experience">
+      <div class="section-inner" style="max-width:900px">
 
-        <div class="reveal text-center mb-16">
-          <p class="section-label justify-center mb-4">What I Do</p>
-          <h2 class="text-4xl md:text-5xl font-bold text-white mb-4">
-            Building at the <span class="gradient-text">Intersection</span>
-          </h2>
-          <p class="text-slate-400 max-w-xl mx-auto">
-            Engineering, strategy, and technology - I work across domains and love tackling hard problems from first principles.
+        <div class="reveal">
+          <p class="section-label">Experience</p>
+          <h2 class="section-title">Stations Along the <span class="accent">Orbit</span></h2>
+        </div>
+
+        <div class="timeline">
+
+          <!-- 1. Shaastra -->
+          <div class="timeline-item reveal reveal-d1">
+            <div class="timeline-card">
+              <div class="timeline-header">
+                <div>
+                  <h3>Shaastra CR Head — Sponsorship &amp; PR</h3>
+                  <p class="org">IIT Madras Technical Festival</p>
+                </div>
+                <span class="timeline-badge badge-cyan">May '26 – Present</span>
+              </div>
+              <ul class="timeline-bullets">
+                <li>Leading ₹1.9 Cr monetary sponsorship target for Shaastra '27 with year-long strategy</li>
+                <li>Mentoring a team of 18 coordinators acquiring in-kind &amp; monetary sponsorships worth ₹15L+</li>
+                <li>Defined KPIs, revamped sponsor engagement &amp; identified new sponsorship avenues</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- 2. Edchemy -->
+          <div class="timeline-item reveal reveal-d2">
+            <div class="timeline-card">
+              <div class="timeline-header">
+                <div>
+                  <h3>Product Strategy Intern</h3>
+                  <p class="org">Edchemy — AI EdTech SaaS (400+ institutional clients)</p>
+                </div>
+                <span class="timeline-badge badge-violet">May '26 – Present</span>
+              </div>
+              <ul class="timeline-bullets">
+                <li>Assessed end-to-end commercial feasibility of an AI assessment product for K-12 &amp; university segments</li>
+                <li>Mapped 6+ AI tools; structured a 3-tier pricing model projecting breakeven at 20% adoption</li>
+                <li>Built GTM framework &amp; launch roadmap enabling founding team's go/no-go decision</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- 3. E-Cell -->
+          <div class="timeline-item reveal reveal-d3">
+            <div class="timeline-card">
+              <div class="timeline-header">
+                <div>
+                  <h3>Manager — Startup Services, E-Cell</h3>
+                  <p class="org">IIT Madras</p>
+                </div>
+                <span class="timeline-badge badge-emerald">May '25 – May '26</span>
+              </div>
+              <ul class="timeline-bullets">
+                <li>Spearheaded startup-investor matchmaking at E-Summit '26, gaining ~10 investor commitments</li>
+                <li>Scaled meetings 33% YoY, registrations 2.5x YoY; managed 120+ meetings with zero disruptions</li>
+                <li>Built AI-powered matchmaking portal with slot scheduling for streamlined pairing logistics</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- 4. Aero Club -->
+          <div class="timeline-item reveal reveal-d4">
+            <div class="timeline-card">
+              <div class="timeline-header">
+                <div>
+                  <h3>Coordinator — Aero Club</h3>
+                  <p class="org">IIT Madras</p>
+                </div>
+                <span class="timeline-badge badge-amber">May '25 – May '26</span>
+              </div>
+              <ul class="timeline-bullets">
+                <li>Delivered YouTube live on autonomous navigation &amp; path planning (A*, RRT algorithms)</li>
+                <li>Conducted live UAV flight missions using Pixhawk; trained students in sensor fusion &amp; path planning</li>
+                <li>Designed &amp; executed end-to-end curriculum for 20 juniors on aerodynamics &amp; drone assembly</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- 5. Finance Club -->
+          <div class="timeline-item reveal reveal-d5">
+            <div class="timeline-card">
+              <div class="timeline-header">
+                <div>
+                  <h3>Deputy Coordinator — Finance Club</h3>
+                  <p class="org">IIT Madras</p>
+                </div>
+                <span class="timeline-badge badge-rose">Aug '24 – May '25</span>
+              </div>
+              <ul class="timeline-bullets">
+                <li>Organized "36' Wall Street" flagship event across 3 days with 400+ participants</li>
+                <li>Secured in-kind sponsorships; delivered speaker sessions &amp; large-scale finance events</li>
+                <li>Analyzed consumer behavior &amp; market trends for FMCG &amp; equity-themed events</li>
+              </ul>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════════
+         PROJECTS / MISSION LOG
+         ═══════════════════════════════════════════════════════════ -->
+    <section class="projects-section" id="projects">
+      <div class="section-inner">
+
+        <div class="reveal">
+          <p class="section-label">Projects</p>
+          <h2 class="section-title">Mission <span class="accent">Log</span></h2>
+        </div>
+
+        <!-- Main Projects -->
+        <div class="project-main-grid">
+
+          <!-- I. Guided UAV -->
+          <div class="project-card reveal reveal-d1">
+            <div class="project-card-banner bg-uav">
+              <span class="numeral">I</span>
+              <span class="emoji">✈️</span>
+            </div>
+            <div class="project-card-body">
+              <div class="project-card-tags">
+                <span class="project-tag badge-amber">Technical</span>
+                <span class="project-tag badge-cyan">Aero Club, IITM</span>
+              </div>
+              <h3>Guided UAV — 2m Wingspan Fixed-Wing</h3>
+              <p>Engineered a full 2m wingspan fixed-wing UAV from concept to flight for drone-tracking &amp; defense applications. Designed CAD in Fusion 360; fabricated with glass &amp; carbon fibre composites. Deployed YOLO CV for real-time detection at ~30 FPS. Completed 4-milestone test campaigns.</p>
+              <div class="project-tech-tags">
+                <span class="tech-tag badge-cyan">YOLO / CV</span>
+                <span class="tech-tag badge-amber">Fusion 360</span>
+                <span class="tech-tag badge-violet">Pixhawk</span>
+                <span class="tech-tag badge-rose">Carbon Fibre</span>
+              </div>
+              <div class="project-card-footer">
+                <a href="https://github.com/arnavsamahith" target="_blank" rel="noopener" class="project-link">
+                  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                  GitHub
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- II. UAV Visual Tracking -->
+          <div class="project-card reveal reveal-d2">
+            <div class="project-card-banner bg-track">
+              <span class="numeral">II</span>
+              <span class="emoji">🎯</span>
+            </div>
+            <div class="project-card-body">
+              <div class="project-card-tags">
+                <span class="project-tag badge-amber">Technical</span>
+              </div>
+              <h3>UAV Visual Tracking System</h3>
+              <p>2-stage visual tracking pipeline: YOLOv8 for initial detection + cv2.KalmanFilter (4-state: x, y, vx, vy) with KCF bbox centroid measurements. Dynamic tracker re-initialization — on KCF failure, system auto-reacquires target via YOLO.</p>
+              <div class="project-tech-tags">
+                <span class="tech-tag badge-cyan">YOLOv8</span>
+                <span class="tech-tag badge-violet">Kalman Filter</span>
+                <span class="tech-tag badge-emerald">OpenCV</span>
+                <span class="tech-tag badge-amber">KCF Tracker</span>
+              </div>
+              <div class="project-card-footer">
+                <a href="https://github.com/arnavsamahith" target="_blank" rel="noopener" class="project-link">
+                  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                  GitHub
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- III. Answer Paper Evaluation -->
+          <div class="project-card reveal reveal-d1">
+            <div class="project-card-banner bg-llm">
+              <span class="numeral">III</span>
+              <span class="emoji">📝</span>
+            </div>
+            <div class="project-card-body">
+              <div class="project-card-tags">
+                <span class="project-tag badge-cyan">AI / Software</span>
+              </div>
+              <h3>Answer Paper Evaluation — LLM Pipeline</h3>
+              <p>LLM grading pipeline using PDF segmentation, script OCR, and JSON prompting across 7 NLP tasks. Benchmarked 4+ LLMs on handwriting recognition &amp; step-marking across 14 subject-grade combos. Built React dashboard with Python backend.</p>
+              <div class="project-tech-tags">
+                <span class="tech-tag badge-violet">LLM / OCR</span>
+                <span class="tech-tag badge-cyan">React</span>
+                <span class="tech-tag badge-emerald">Python</span>
+                <span class="tech-tag badge-amber">PDF Segmentation</span>
+              </div>
+              <div class="project-card-footer">
+                <a href="https://github.com/arnavsamahith" target="_blank" rel="noopener" class="project-link">
+                  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                  GitHub
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- IV. Algorithmic Poker Bot -->
+          <div class="project-card reveal reveal-d2">
+            <div class="project-card-banner bg-poker">
+              <span class="numeral">IV</span>
+              <span class="emoji">🃏</span>
+            </div>
+            <div class="project-card-body">
+              <div class="project-card-tags">
+                <span class="project-tag badge-cyan">AI / Software</span>
+                <span class="project-tag badge-amber">IIT PokerBots 2026</span>
+              </div>
+              <h3>Algorithmic Poker Bot</h3>
+              <p>Heads-up poker bot with Monte Carlo equity simulation across 250 sims/decision. Dynamic decision logic with 6 equity thresholds across preflop/flop/turn/river, adjusting aggression based on board texture, pot odds, and stack-to-pot ratio.</p>
+              <div class="project-tech-tags">
+                <span class="tech-tag badge-emerald">Python</span>
+                <span class="tech-tag badge-violet">Monte Carlo</span>
+                <span class="tech-tag badge-amber">Game Theory</span>
+              </div>
+              <div class="project-card-footer">
+                <a href="https://github.com/arnavsamahith" target="_blank" rel="noopener" class="project-link">
+                  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                  GitHub
+                </a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Side Missions -->
+        <p class="sub-heading reveal">Side Missions</p>
+        <div class="side-grid">
+
+          <div class="side-card reveal reveal-d1">
+            <div class="card-emoji">🤖</div>
+            <h4>Mini Mouse — Maze Solver</h4>
+            <p>Autonomous micro-mouse using flood-fill pathfinding to solve an 8×8 maze. Iterated hardware-software across 5+ cycles with Arduino &amp; IR sensors, cutting nav errors by ~40%.</p>
+            <div class="project-tech-tags">
+              <span class="tech-tag badge-cyan">Arduino</span>
+              <span class="tech-tag badge-emerald">Flood-Fill</span>
+              <span class="tech-tag badge-violet">A*</span>
+            </div>
+          </div>
+
+          <div class="side-card reveal reveal-d2">
+            <div class="card-emoji">📊</div>
+            <h4>IMC Prosperity 4 — Algo Trading</h4>
+            <p>Ranked 8th in India and 41st globally among 22,000+ teams. Engineered Python trading bots using market-making strategies across equities, options and fair-value estimation.</p>
+            <div class="mini-result" style="background:rgba(6,182,212,0.1); color:var(--cyan-light); border: 1px solid rgba(6,182,212,0.25); border-radius:0.4rem;">🏅 Rank 8 India · 41st Global</div>
+          </div>
+
+          <div class="side-card reveal reveal-d3">
+            <div class="card-emoji">🌿</div>
+            <h4>N3X AI Consulting</h4>
+            <p>Managed end-to-end consulting for N3X AI SaaS startup — market research, GTM strategy &amp; MVP launch. Benchmarked SprintPilot against 10+ rivals.</p>
+            <div class="project-tech-tags">
+              <span class="tech-tag badge-violet">GTM</span>
+              <span class="tech-tag badge-amber">Market Research</span>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Competition Victories -->
+        <p class="sub-heading reveal">Competition Victories</p>
+        <div class="side-grid">
+
+          <div class="side-card reveal reveal-d1">
+            <div class="card-emoji">🏆</div>
+            <h4>Samnivesha — IIT Patna</h4>
+            <p>Won 1st position in sustainability case study, outcompeting 400+ teams. Proposed low-carbon concrete mix cutting CO₂ by 60%.</p>
+            <div class="mini-result" style="background:rgba(250,204,21,0.08); color:#FACC15; border: 1px solid rgba(250,204,21,0.25); border-radius:0.4rem;">🥇 1st Place · 400+ Teams</div>
+          </div>
+
+          <div class="side-card reveal reveal-d2">
+            <div class="card-emoji">💰</div>
+            <h4>Fisconomics — IIT Madras</h4>
+            <p>3rd place; proposed ₹806 Cr budget for Rajasthan district projecting ₹1,641 Cr economic impact.</p>
+            <div class="mini-result" style="background:rgba(139,92,246,0.08); color:var(--violet-light); border: 1px solid rgba(139,92,246,0.25); border-radius:0.4rem;">🥉 3rd Place</div>
+          </div>
+
+          <div class="side-card reveal reveal-d3">
+            <div class="card-emoji">🎖️</div>
+            <h4>Delhivery &amp; Strategia</h4>
+            <p>Delhivery Way (IIT KGP) — Top 10 of 2,616 teams, evaluated by C-suite. Strategia (SIBM Pune) — Top 8 of 1,200 teams; only undergrad team.</p>
+            <div class="mini-result" style="background:rgba(16,185,129,0.08); color:#6EE7B7; border: 1px solid rgba(16,185,129,0.25); border-radius:0.4rem;">🎖️ 2× National Finalist</div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════════
+         CONTACT / TRANSMISSIONS
+         ═══════════════════════════════════════════════════════════ -->
+    <section class="contact-section" id="contact">
+      <div class="section-inner">
+
+        <div class="reveal" style="text-align:center">
+          <p class="section-label" style="justify-content:center">Contact</p>
+          <h2 class="section-title"><span class="accent">Transmissions</span></h2>
+          <p style="color:var(--text-muted); font-size:0.9rem; margin-top:0.5rem; max-width:500px; margin-left:auto; margin-right:auto;">
+            Signal received. Let's build something together.
           </p>
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="contact-grid">
 
-          <!-- Card 1 — Technical Projects -->
-          <div class="card reveal reveal-delay-1 p-8 group">
-            <div class="w-14 h-14 rounded-2xl bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center mb-6 group-hover:bg-emerald-500/20 transition-colors duration-300">
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 text-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/>
-              </svg>
-            </div>
-            <h3 class="text-xl font-bold text-white mb-3">Engineering & Tech</h3>
-            <p class="text-slate-400 text-sm leading-relaxed mb-6">
-              Building guided UAVs with CV pipelines, algorithmic trading bots, AI equity platforms, and autonomous robotics systems - from concept to deployment.
-            </p>
-            <div class="flex flex-wrap gap-2">
-              <span class="badge badge-emerald">Python</span>
-              <span class="badge badge-emerald">YOLO / CV</span>
-              <span class="badge badge-emerald">C++</span>
-            </div>
-          </div>
-
-          <!-- Card 2 — Strategy & Consulting -->
-          <div class="card reveal reveal-delay-2 p-8 group">
-            <div class="w-14 h-14 rounded-2xl bg-indigo-500/10 border border-indigo-500/20 flex items-center justify-center mb-6 group-hover:bg-indigo-500/20 transition-colors duration-300">
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 text-indigo-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/>
-              </svg>
-            </div>
-            <h3 class="text-xl font-bold text-white mb-3">Consulting & Strategy</h3>
-            <p class="text-slate-400 text-sm leading-relaxed mb-6">
-              Product Strategy Intern at Edchemy (AI SaaS, 400+ institutional clients). Built GTM frameworks, pricing models, and launch roadmaps for AI assessment products.
-            </p>
-            <div class="flex flex-wrap gap-2">
-              <span class="badge badge-blue">GTM Strategy</span>
-              <span class="badge badge-blue">Pricing Models</span>
-              <span class="badge badge-blue">Market Research</span>
-            </div>
-          </div>
-
-          <!-- Card 3 — Case Competitions -->
-          <div class="card reveal reveal-delay-3 p-8 group">
-            <div class="w-14 h-14 rounded-2xl bg-orange-500/10 border border-orange-500/20 flex items-center justify-center mb-6 group-hover:bg-orange-500/20 transition-colors duration-300">
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 text-orange-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"/>
-              </svg>
-            </div>
-            <h3 class="text-xl font-bold text-white mb-3">Competitions & Hackathons</h3>
-            <p class="text-slate-400 text-sm leading-relaxed mb-6">
-              Won Samnivesha (IIT Patna), 3rd at Fisconomics (IIT Madras), national finalists at IIT Kharagpur, SIBM Pune & NIT Surathkal - consistently ranked top nationally.
-            </p>
-            <div class="flex flex-wrap gap-2">
-              <span class="badge badge-orange">Sustainability</span>
-              <span class="badge badge-orange">Finance</span>
-              <span class="badge badge-orange">GTM</span>
-            </div>
-          </div>
-
-        </div>
-
-        <div class="reveal text-center mt-14">
-          <p class="text-slate-500 mb-4">See the full portfolio of projects and competitions</p>
-          <a href="projects.html" class="btn-ghost inline-flex">
-            Browse All Projects
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+          <a href="master.pdf" target="_blank" rel="noopener" class="contact-card reveal reveal-d1" id="contact-resume">
+            <div class="contact-card-icon" style="background:rgba(6,182,212,0.1); border:1px solid rgba(6,182,212,0.2);">📄</div>
+            <h4>Resume</h4>
+            <p>Download my full resume with projects, experience, and education.</p>
+            <span class="arrow">→</span>
           </a>
-        </div>
-      </div>
-    </section>
 
-    <!-- STATS STRIP -->
-    <section class="py-16 px-6">
-      <div class="max-w-6xl mx-auto">
-        <div class="reveal grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-2xl mx-auto">
-          <div class="text-center p-6 rounded-2xl bg-slate-800/50 border border-slate-700/50">
-            <p class="text-4xl font-black gradient-text mb-1">Top 8</p>
-            <p class="text-slate-500 text-sm">India - IMC Prosperity 4</p>
-          </div>
-          <div class="text-center p-6 rounded-2xl bg-slate-800/50 border border-slate-700/50">
-            <p class="text-4xl font-black gradient-text mb-1">4+</p>
-            <p class="text-slate-500 text-sm">National Finalist Titles</p>
-          </div>
+          <a href="https://linkedin.com/in/arnavsamahith" target="_blank" rel="noopener" class="contact-card reveal reveal-d2" id="contact-linkedin">
+            <div class="contact-card-icon" style="background:rgba(59,130,246,0.1); border:1px solid rgba(59,130,246,0.2);">💼</div>
+            <h4>LinkedIn</h4>
+            <p>Connect with me professionally and see my journey.</p>
+            <span class="arrow">→</span>
+          </a>
+
+          <a href="https://github.com/arnavsamahith" target="_blank" rel="noopener" class="contact-card reveal reveal-d3" id="contact-github">
+            <div class="contact-card-icon" style="background:rgba(139,92,246,0.1); border:1px solid rgba(139,92,246,0.2);">🔮</div>
+            <h4>GitHub</h4>
+            <p>Explore my code, open-source projects, and experiments.</p>
+            <span class="arrow">→</span>
+          </a>
+
+          <a href="mailto:na24b025@smail.iitm.ac.in" class="contact-card reveal reveal-d4" id="contact-email">
+            <div class="contact-card-icon" style="background:rgba(16,185,129,0.1); border:1px solid rgba(16,185,129,0.2);">✉️</div>
+            <h4>Email</h4>
+            <p>Drop me a message — I respond quickly.</p>
+            <span class="arrow">→</span>
+          </a>
+
         </div>
+
       </div>
     </section>
 
   </main>
 
-  <!-- FOOTER -->
-  <footer class="py-12 px-6 bg-slate-900 border-t border-slate-800">
-    <div class="max-w-6xl mx-auto">
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-10 mb-10">
-
-        <div>
-          <a href="index.html" class="text-xl font-bold gradient-text">arnav.</a>
-          <p class="text-slate-500 text-sm mt-3 leading-relaxed max-w-xs">
-            B.Tech Naval Architecture & Ocean Engineering · IIT Madras · Bengaluru, India 🇮🇳
-          </p>
-          <div class="flex gap-3 mt-5">
-            <a href="https://github.com/arnavsamahith" target="_blank" rel="noopener" class="social-link" aria-label="GitHub">
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 21.795 24 17.295 24 12c0-6.63-5.37-12-12-12z"/></svg>
-            </a>
-            <a href="https://linkedin.com/in/arnavsamahith" target="_blank" rel="noopener" class="social-link" aria-label="LinkedIn">
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
-            </a>
-            <a href="mailto:na24b025@smail.iitm.ac.in" class="social-link" aria-label="Email">
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
-            </a>
-          </div>
-        </div>
-
-        <div>
-          <h4 class="text-sm font-semibold text-slate-300 uppercase tracking-wider mb-4">Navigation</h4>
-          <ul class="space-y-2">
-            <li><a href="index.html"    class="text-slate-500 hover:text-accent text-sm transition-colors">Home</a></li>
-            <li><a href="about.html"   class="text-slate-500 hover:text-accent text-sm transition-colors">About</a></li>
-            <li><a href="projects.html" class="text-slate-500 hover:text-accent text-sm transition-colors">Projects</a></li>
-            <li><a href="contact.html" class="text-slate-500 hover:text-accent text-sm transition-colors">Contact</a></li>
-          </ul>
-        </div>
-
-        <div>
-          <h4 class="text-sm font-semibold text-slate-300 uppercase tracking-wider mb-4">Get In Touch</h4>
-          <ul class="space-y-2">
-            <li><a href="mailto:na24b025@smail.iitm.ac.in" class="text-slate-500 hover:text-accent text-sm transition-colors">na24b025@smail.iitm.ac.in</a></li>
-            <li><span class="text-slate-500 text-sm">IIT Madras, Chennai 🇮🇳</span></li>
-            <li><a href="contact.html" class="btn-primary inline-flex mt-2 py-2 px-4 text-sm">Say Hello</a></li>
-          </ul>
-        </div>
-
+  <!-- ═══════════════════════════════════════════════════════════
+       FOOTER
+       ═══════════════════════════════════════════════════════════ -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-social">
+        <a href="https://linkedin.com/in/arnavsamahith" target="_blank" rel="noopener" class="social-icon" aria-label="LinkedIn">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+        </a>
+        <a href="https://github.com/arnavsamahith" target="_blank" rel="noopener" class="social-icon" aria-label="GitHub">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+        </a>
+        <a href="mailto:na24b025@smail.iitm.ac.in" class="social-icon" aria-label="Email">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+        </a>
       </div>
-
-      <div class="footer-divider mb-6"></div>
-      <div class="flex flex-col sm:flex-row items-center justify-between gap-2 text-slate-600 text-xs">
-        <p>&copy; 2026 Arnav Samahith. All rights reserved.</p>
-        <p>Built with <span class="text-accent">❤</span> and lots of ☕</p>
-      </div>
+      <p class="footer-text">
+        &copy; 2026 Arnav Samahith. Built with <span class="heart">✦</span> from IIT Madras.
+      </p>
     </div>
   </footer>
 
